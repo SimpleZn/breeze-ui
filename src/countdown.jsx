@@ -24,7 +24,7 @@ class CountDown extends Component {
     if (this.interval) return;
     this.draw();
     this.interval = setInterval(
-      this.draw(),
+      this.draw,
       this.props.refresh
     );
   }
@@ -86,7 +86,7 @@ class CountDown extends Component {
 
   addZero(num) {
     num += '';
-    if (num.length === 2) return;
+    if (num.length === 2) return num;
     return '0' + num;
   }
 
